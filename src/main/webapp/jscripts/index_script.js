@@ -1,19 +1,3 @@
-// $count = 1;
-// $("#generate").click(function(){
-//     $.post("welcome", {"username":"hello", "count":$count.toString()}, function(data, textStatus, fn) {
-//             if (textStatus=="success") {
-//                 document.getElementById("return_value").innerText = data;
-//                 document.getElementById("return_value").append($count);
-//             }
-//         },
-//         "html");
-//     $count++;
-// });
-// $("#clear").click(function(){
-//     document.getElementById("return_value").innerText = "";
-// });
-
-
 $("#create").click(
   function(){
       console.log("Refresh main_frame to avatar creation");
