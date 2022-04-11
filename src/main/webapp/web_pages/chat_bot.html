@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #modelBorderContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+        }
+        #modelBorder {
+            max-width: 100px;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="modelBorderContainer">
+        <div id="modelBorder"></div>
+    </div>
+    <script type="application/javascript">
+        var modelUrl = "default.glb";
+    </script>
+    <script src="threejs/three.min.js?v=2.0.3"></script>
+    <script src="threejs/OrbitControls.js?v=2.0.3"></script>
+    <script src="threejs/GLTFLoader.js?v=2.0.3"></script>
+    <script src="threejs/WebGL.js?v=2.0.3"></script>
+    <script src="threejs/stats.min.js?v=2.0.3"></script>
+    <script src="threejs/3dmodel.js?v=2.0.3"></script>
+
+    <div>
+        <iframe src="../question.jsp" width="50%"></iframe>
+    </div>
+</body>
+</html>
