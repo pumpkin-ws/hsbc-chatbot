@@ -2,7 +2,7 @@ INTRODUCTION:
 This chatbot web application can be accessed through http://42.193.222.160:8080/hsbc-chatbot/
 (public domain Tencent server)
 
-LOADING OF THE DEFAULT AVATAR CAN TAKE SOME TIME, CONSUMING MUCH BANDWITH. ONCE LOADED, THE QA SYSTEM WILL BE FASTER.
+LOADING OF THE DEFAULT AVATAR CAN TAKE SOME TIME, CONSUMING MUCH BANDWITH. ONCE LOADED, THE QA SYSTEM SHOULD BE FASTER.
 
 This web application is hosted on a tomcat server.
 
@@ -40,9 +40,15 @@ The preset questions and answers are typed in the xlsx file in root directory. R
 a 24 hour valid token is needed to call robot services. The received answer is returned in post's response message.
 An atomic boolean is used to help ensure thread safety.
 
+As part of the authentication, the temporary token provided by Huawei Cloud will only last for 24 hours. The token
+needs to be updated so to be valid. Therefore, the access token and the time are saved on the server. Before every call
+to the cloud server, the validity of the local token will be checked. If expired, a new one will be requested and saved.
+A new token should not be generated for every service call to the cloud, for two obvious reasons: 1-tokens cost money;
+2-requesting token can be slow.
+
 TODOs:
-1 - Save Huawei token to a file
-2 - Check the file for modification time before every call to cloud service and update the token every 24 hours
+1 - Save Huawei token to a file (done)
+2 - Check the file for modification time before every call to cloud service and update the token every 20 hours (done)
 3 - create_avatar.html: Automatically download avatar after creation
 4 - Servlet: Try to reinitiate a post connection if connection is lost or return result is bad
 5 - Improve cloud response unparsing

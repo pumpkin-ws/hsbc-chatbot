@@ -48,10 +48,7 @@
         </iframe>
     </div>
 </div>
-
-<div id="abc">
-
-</div>
+<script src="jscripts/index_script.js"></script>
 <p>Created by Sheng Wei. All rights reserved, 2022.</p>
 </body>
 </html>
