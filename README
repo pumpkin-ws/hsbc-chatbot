@@ -51,4 +51,4 @@ TODOs:
 2 - Check the file for modification time before every call to cloud service and update the token every 20 hours (done)
 3 - create_avatar.html: Automatically download avatar after creation
 4 - Servlet: Try to reinitiate a post connection if connection is lost or return result is bad
-5 - Improve cloud response unparsing
+5 - Improve cloud response unparsing (plan to unparse with alibaba's fastjson)
