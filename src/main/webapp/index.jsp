@@ -13,7 +13,6 @@
             height: 900px;
             border-style: solid;
             border-color: darkturquoise;
-            /*grid-auto-rows: auto;*/
         }
         .right {
             height: 900px;
@@ -26,12 +25,11 @@
             font-size: large;
         }
     </style>
-
 </head>
 <body>
 <div style="border-style: dashed; border-color: blue;"; >
     <h1 style="text-align: center;">Metaverse Chat bot</h1>
-    <h2 style="text-align: center; font-size: 20px;">You can create your own metaverse avatar here, and get interactive answers</h2>
+    <h2 style="text-align: center; font-size: 20px;">You can create your own metaverse avatar here, and talk to a chat bot</h2>
 </div>
 <div id="box">
     <div class="left">
@@ -49,6 +47,6 @@
     </div>
 </div>
 <script src="jscripts/index_script.js"></script>
-<p>Created by Sheng Wei. All rights reserved, 2022.</p>
+<p>Created by Sheng Wei. All rights reserved, 2022. Powered by Huawei Cloud.</p>
 </body>
 </html>

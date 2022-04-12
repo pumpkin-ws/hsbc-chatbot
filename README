@@ -47,8 +47,8 @@ A new token should not be generated for every service call to the cloud, for two
 2-requesting token can be slow.
 
 TODOs:
-1 - Save Huawei token to a file (done)
-2 - Check the file for modification time before every call to cloud service and update the token every 20 hours (done)
+1 - Save Huawei cloud token to a file (done)
+2 - Check the file for the time of modification before every call to cloud service and update the token every 20 hours (done)
 3 - create_avatar.html: Automatically download avatar after creation
 4 - Servlet: Try to reinitiate a post connection if connection is lost or return result is bad
 5 - Improve cloud response unparsing (plan to unparse with alibaba's fastjson)

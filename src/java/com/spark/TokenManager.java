@@ -46,6 +46,9 @@ public class TokenManager {
         }
     }
 
+    /**
+     * update the token file with
+     */
     private static void updateTokenfile() {
         String token_dir = "/var/lib/tomcat9/webapps/hsbc-chatbot/token.txt";
         File file = new File(token_dir);
@@ -67,7 +70,7 @@ public class TokenManager {
 
     /**
      * Get token from the system token file
-     * @return
+     * @return the acquired token string
      */
     static public String getToken() {
         updateToken();
@@ -92,7 +95,7 @@ public class TokenManager {
      * Read the token file and make sure the token has not expired
      */
     static public boolean isValid() {
-        Long valid_time = new Long(20*60*60);
+        Long valid_time = new Long(20*60*60); // Although token expires in 24 hr, set the expiration time as 20 hr just to be safe
         String token_dir = "/var/lib/tomcat9/webapps/hsbc-chatbot/token.txt";
         File file = new File(token_dir);
         try {
@@ -117,7 +120,7 @@ public class TokenManager {
 
     /**
      * Check if token file exists, if file exists, return true; if not, create token file in $HOME/Documents/token.txt
-     * @return
+     * @return true if token file exists, or false otherwise
      */
     static public boolean tokenExists() {
         String token_dir = "/var/lib/tomcat9/webapps/hsbc-chatbot/token.txt";
@@ -134,6 +137,11 @@ public class TokenManager {
         }
     }
 
+    /**
+     * Generate temporary token given the access key, the secret access key, the project id, the region id, the domain name,
+     * the user name, and password
+     * @return
+     */
     static public String generateToken() {
 
         String ak = "N8BOCLCOWIZ4HHTO0D5E";
